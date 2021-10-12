@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Stores List</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<h1>Stores List</h1>
+<h2> <a href="/addstore">Add new store</a> </h2>
+<br/><br/>
+<div class="container">
+    <table class ="container" border="1">
+        <tr>
+            <th><h1>Id</h1></th>
+            <th><h1>Name</h1></th>
+            <th><h1>Address</h1></th>
+            <th><h1>Size</h1></th>
+        </tr>
+        <tr th:each ="store : ${stores}">
+            <td th:utext="${store.id}">...</td>
+            <td th:utext="${store.name}">...</td>
+            <td th:utext="${store.address}">...</td>
+            <td th:utext="${store.size}">...</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
