@@ -1,21 +1,83 @@
 package by.kishko.storeschain.Model;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
-import javax.persistence.Table;
-import java.util.Date;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
-@Table(name ="Employee")
-@Getter
-@AllArgsConstructor
-@NoArgsConstructor
-public class Employee extends BaseEntity {
-    private String nameFirst;
-    private String nameLast;
-    private Character gender;
-    private Date DateOfBirth;
-    private Long StoreId;
+public class Employee {
+
+  @Id
+  private long employeeId;
+  private String nameFirst;
+  private String nameLast;
+  private String gender;
+  private java.sql.Date dateOfBirth;
+  @ManyToOne
+  private Store store;
+  @ManyToOne
+  private Post post;
+
+
+  public long getEmployeeId() {
+    return employeeId;
+  }
+
+  public void setEmployeeId(long employeeId) {
+    this.employeeId = employeeId;
+  }
+
+
+  public String getNameFirst() {
+    return nameFirst;
+  }
+
+  public void setNameFirst(String nameFirst) {
+    this.nameFirst = nameFirst;
+  }
+
+
+  public String getNameLast() {
+    return nameLast;
+  }
+
+  public void setNameLast(String nameLast) {
+    this.nameLast = nameLast;
+  }
+
+
+  public String getGender() {
+    return gender;
+  }
+
+  public void setGender(String gender) {
+    this.gender = gender;
+  }
+
+
+  public java.sql.Date getDateOfBirth() {
+    return dateOfBirth;
+  }
+
+  public void setDateOfBirth(java.sql.Date dateOfBirth) {
+    this.dateOfBirth = dateOfBirth;
+  }
+
+  public Store getStore() {
+    return store;
+  }
+
+  public void setStore(Store store) {
+    this.store = store;
+  }
+
+
+  public Post getPostId() {
+    return post;
+  }
+
+  public void setPostId(Post post) {
+    this.post = post;
+  }
+
 }

@@ -4,18 +4,19 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class UserType {
-@Id
-  private long userTypeId;
+public class City{
+
+  @Id
+  private long cityId;
   private String name;
 
 
-  public long getUserTypeId() {
-    return userTypeId;
+  public long getCityId() {
+    return cityId;
   }
 
-  public void setUserTypeId(long userTypeId) {
-    this.userTypeId = userTypeId;
+  public void setCityId(long cityId) {
+    this.cityId = cityId;
   }
 
 

@@ -4,18 +4,19 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class UserType {
-@Id
-  private long userTypeId;
+public class Departement {
+
+  @Id
+  private long departementId;
   private String name;
 
 
-  public long getUserTypeId() {
-    return userTypeId;
+  public long getDepartementId() {
+    return departementId;
   }
 
-  public void setUserTypeId(long userTypeId) {
-    this.userTypeId = userTypeId;
+  public void setDepartementId(long departementId) {
+    this.departementId = departementId;
   }
 
 

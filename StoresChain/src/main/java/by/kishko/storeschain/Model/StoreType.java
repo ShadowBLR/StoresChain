@@ -1,17 +1,30 @@
 package by.kishko.storeschain.Model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-
 import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.Id;
 
 @Entity
-@Table(name ="StoreType")
-@Getter
-@AllArgsConstructor
-@NoArgsConstructor
-public class StoreType extends BaseEntity{
-    private String Name;
+public class StoreType {
+@Id
+  private long storeTypeId;
+  private String name;
+
+
+  public long getStoreTypeId() {
+    return storeTypeId;
+  }
+
+  public void setStoreTypeId(long storeTypeId) {
+    this.storeTypeId = storeTypeId;
+  }
+
+
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
 }

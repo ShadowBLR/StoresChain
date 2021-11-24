@@ -1,12 +1,12 @@
-package by.kishko.storeschain.Model;
+package by.kishko.storeschain.Form;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Getter
+@Setter
 public class StoresForm {
     private int id;
     private String name;
